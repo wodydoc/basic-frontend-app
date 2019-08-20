@@ -5,14 +5,22 @@ import Navbar from './components/Navbar.js';
 import PrivateRoute from './components/PrivateRoute.js';
 import AnonRoute from './components/AnonRoute.js';
 
-import Private from './pages/Private';
-import Signup from './pages/Signup';
+
+import Home from './pages/Home';
+import TrackLyrics from './components/TrackLyrics';
+import AddTrack from './pages/AddTrack';
+import AddDeck from './pages/AddDeck';
 import Login from './pages/Login';
+import Notes from './pages/Notes';
+import Decks from './pages/Decks';
+import Signup from './pages/Signup';
+import SearchPage from './pages/SearchPage';
 
 import AuthProvider from './contexts/auth-context.js';
 
 import './App.css';
 import 'milligram';
+import LyricsPage from './pages/LyricsPage.js';
 
 class App extends Component {
   render() {
@@ -20,12 +28,18 @@ class App extends Component {
       <Router>
         <AuthProvider>
           <div className="container">
-            <h1>Basic React Authentication</h1>
+            <h1>Cantar</h1>
             <Navbar />
             <Switch>
-              <AnonRoute path="/signup" component={Signup} />
-              <AnonRoute path="/login" component={Login} />
-              <PrivateRoute path="/private" component={Private} />
+              <PrivateRoute exact path="/" component={Home} />
+              <AnonRoute exact path="/signup" component={Signup} />
+              <AnonRoute exact path="/login" component={Login} />
+              <PrivateRoute exact path="/addTrack" component={AddTrack} />
+              <PrivateRoute exact path="/trackLyrics/:id" component={LyricsPage} />
+              <PrivateRoute exact path="/search" component={SearchPage}/>
+              <PrivateRoute exact path="/decks/" component={Decks} />
+              <PrivateRoute exact path="/addDeck" component={AddDeck} />
+              <PrivateRoute exact path="/notes" component={Notes} />
             </Switch>
           </div>
         </AuthProvider>

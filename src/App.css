@@ -31,3 +31,9 @@
     transform: rotate(360deg);
   }
 }
+
+.track-card {
+  background-color: #282c34;
+  color: white;
+  font-size: 150%;
+}
