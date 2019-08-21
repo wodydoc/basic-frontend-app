@@ -71,8 +71,8 @@ class TrackLyrics extends Component{
                    <p>{category}</p>
                     {/* show the transaleted word when there is one */}
                     <div className="revealTranslations">
-                        <h4 className="lyrics-translated">🇺🇸<i>dictionary</i><br></br>{this.state.lyricsTranslated}</h4>
-                        <h4 className="lyrics-selected">🇪🇸<i>notebook</i><br></br>{this.state.lyricsSelected}</h4>
+                        <h4 className="lyrics-selected">🇪🇸<i>dictionary</i><br></br>{this.state.lyricsTranslated}</h4>
+                        <h4 className="lyrics-translated">🇺🇸<i>my notebook</i><br></br>{this.state.lyricsSelected}</h4>
                     </div>
                  {/* //love heart button on click props.updateMyTracks(props.track._id) */}
               </div>

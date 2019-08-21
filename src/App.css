@@ -78,6 +78,8 @@ p {
 .tabs {
   list-style: none;
   margin: 0;
+  margin-left: -12%;
+  border-radius: 15px;
   border-left: 28px;
   border-right-width: 104px;
   border-right-style: groove;
@@ -99,11 +101,13 @@ p {
   text-align: center; 
   padding: 10px;
   border-top: 1px solid rgba(255,255,255,0.3); 
-  border-bottom: 1px solid rgba(0,0,0,0.1); 
+  border-bottom: 6px solid rgba(0,0,0,0.1); 
+  font-family: monospace;
+  font-size: xx-large;
 
 }
 .tabs li a {
-  color: forestgreen;
+  color: #282c34b8;
   font-weight: bold;
 }
 
@@ -144,11 +148,14 @@ p {
       font-size: 150%;
       padding: 0.89%;
       /* max-width: 100%; */
-      height: 306px;
+      height: 50rem;
       position: relative;
       margin: 0 auto;
       flex: 1;
-      min-width: 26rem;
+      min-width: 30rem;
+      border-left: antiquewhite;
+      border-left-width: 3rem;
+      border-left-style: ridge;
 }
 .tracks-slider {
   /* background-image: url('../../public/woodDesktopImage.jpeg'); */
@@ -159,9 +166,9 @@ p {
   font-size: 150%; */
   /* padding: 10%; */
 
-  max-width: 26rem;
+  max-width: 30rem;
   overflow-x: scroll;
-  height: 406px;
+  height: 50rem;
   position: relative;
   margin: 0 auto;
 
@@ -182,6 +189,7 @@ p {
   padding: -7px;
   color: #333333;
   font-family: 'Calligraffitti', cursive;
+  margin-bottom: 1rem;
 }
 .tracks-slider h3 {
   padding: 5px;
@@ -191,7 +199,7 @@ p {
 
 .tracks-slider p {
   padding: 5px;
-  color: #f08080;
+  color: wheat;
   text-align: right;
   font-family: monospace;
   text-decoration: double;
@@ -200,10 +208,11 @@ p {
 
 .tracks-slider button {
   color: #dc4242;
-  background: navajowhite;
+  background: #ffdead82;
   border: none;
-  width: 25.2rem;
-  margin: -1rem;
+  width: 20.2rem;
+  font-family: monospace;
+  /* margin: -4rem; */
   border-radius: 3rem;
 }
 p {
@@ -225,16 +234,21 @@ p {
 .track-lyrics h3 {
   text-align: center;
   font-family: monospace;
-  text-decoration: line-through;
+  text-decoration: underline;
   text-decoration-color: #f0808080;
   text-decoration-style: wavy;
   text-transform: uppercase;
   font-size: xx-large;
-  color: #03b9b9;
+  color: #e5c454;
     
 }
 .track-lyrics button {
+ 
   margin-left: 40%;
+    background: unset;
+    border: 0.1rem solid gray;
+    border-radius: .4rem;
+    font-family: monospace;
 }
 
 .lyrics-original {
@@ -252,15 +266,19 @@ p {
 }
 .track-lyrics p {
   border-left-width: 42px;
-  border-left-style: double;
+  border-left-style: inset;
   border-left-color: rgba(199, 40, 40, 0.22);
 }
+.lyrics-translated i {
+  font-family: monospace;
+  color: #61b0f2;
+}
 .lyrics-translated {
-  background: linear-gradient(90deg, #224c8b, #01324f);
+  background: linear-gradient(90deg, #033351, #0a4c73d1);
   text-decoration: none;
   border-radius: 5px;
   /* border-color: blue; */
-  color: #5399d3;
+  color: wheat;
   font-size: 2.5rem;
   border-left: 24px;
   border-left: 28px;
@@ -271,29 +289,33 @@ p {
   padding: 5%;
   position: fixed;
   right: 4px;
-  top: 240px;
+  top: 267px;
   max-width: 31%;
 
 }
-
+.lyrics-selected i {
+  color: #ffb090;
+  font-family: monospace;
+}
 .lyrics-selected {
-  background: linear-gradient(90deg, #c55335, maroon);
+  background: linear-gradient(90deg, #ba4121, #800000e0);
   text-decoration: none;
   border-radius: 5px;
+  color: wheat;
   /* border-color: blue; */
-  color: lightsalmon;
   font-size: 2.5rem;
   border-left: 24px;
   border-left: 28px;
   border-left-width: 42px;
   border-left-style: groove;
-  border-left-color: sienna;
+  border-left-color: #da642c;
   /* border-left-color: aliceblue; */
   font-family: 'Calligraffitti', cursive;
+  
   padding: 5%;
   position: fixed;
   left: 4px;
-  top: 240px;
+  top: 267px;
   max-width: 31%;
 
 }
@@ -351,7 +373,8 @@ body {
 
 }
 .bottomnavbar-search-block {
-  background-color: #dd45448c;
+  background-color: #5f6c75;
+  /* background-color: #dd45448c; */
   border-top: 1px solid #E7E7E7;
   text-align: center;
   padding: 20px;
@@ -364,7 +387,8 @@ body {
   width: 32%;
 }
 .bottomnavbar-add-block {
-  background-color: #f28904a1;
+  background-color: #5f6c75;
+  /* background-color: #f28904a1; */
   border-top: 1px solid #E7E7E7;
   text-align: center;
   padding: 20px;
