@@ -28,6 +28,11 @@ class TrackService {
     return this.tracks.put(`/tracks/${id}/save`)
       .then(({ data }) => data);
   }
+  //unsaves to favorite 
+  unsaveTrack(id) {
+    return this.tracks.delete(`/tracks/${id}/unsave`)
+      .then(({ data }) => data);
+  }
 }
 
 //singleton

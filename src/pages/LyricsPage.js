@@ -40,7 +40,8 @@ updateMyTracks = (id) => {
         <Tabs />
         {/* <Link to ="/AddTrack">Can't find a Track? Create one here!</Link><br></br>
         <Link to ="/search">Have a Track in mind? Seach tracks here!</Link>  */}
-        <h1>MY LYRICS</h1>
+        {/* <h1>MY LYRICS</h1> */}
+        {/* <h4>select text to translate</h4> */}
         
         {
           !waitingForTracks && <TrackLyrics track={track} updateMyTracks={this.updateMyTracks}/>

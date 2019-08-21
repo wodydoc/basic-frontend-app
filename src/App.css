@@ -1,5 +1,18 @@
 .App {
   text-align: center;
+  
+}
+
+.container {
+  background: #333333;
+  margin: 0;
+  overflow-x: hidden;
+  margin: 0 auto;
+  max-width: 112.0rem;
+  padding: 0 4.0rem;
+  position: relative;
+  height: 85rem;
+  width: 100%;
 }
 
 .App-logo {
@@ -32,8 +45,338 @@
   }
 }
 
-.track-card {
-  background-color: #282c34;
+.logocontainer h1 {
+  margin-bottom: -2.0rem;
+}
+h1 {
+  text-align: center;
+  font-family: 'DM Serif Display', serif;
+  
+
+}
+p {
+  color: lightgray;
+
+}
+.li a {
+  color: #E57254;
+}
+
+.nav {
+  display: flex;
+  justify-content: left;
+}
+.nav p{
+  width: 20%;
+  height: 40%;
+}
+.bottomnavbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.tabs {
+  list-style: none;
+  margin: 0;
+  border-left: 28px;
+  border-right-width: 104px;
+  border-right-style: groove;
+  border-right-color: lightpink;
+  background: #E5C454;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.tabs li {
+  width: 40%;
+  height: 40%;
+  text-decoration: none;
+  display: block;
+  width: 40%;
+  padding: 1em;
+  color: rgb(199, 40, 40);
+  text-align: center; 
+  padding: 10px;
+  border-top: 1px solid rgba(255,255,255,0.3); 
+  border-bottom: 1px solid rgba(0,0,0,0.1); 
+
+}
+.tabs li a {
+  color: forestgreen;
+  font-weight: bold;
+}
+
+.tabs Link {
+  text-decoration: none;
+  display: block;
+  width: 40%;
+  padding: 1em;
+  color: white;
+  text-align: center; 
+  padding: 10px;
+  border-top: 1px solid rgba(255,255,255,0.3); 
+  border-bottom: 1px solid rgba(0,0,0,0.1); 
+}
+
+.tabs Link:hover {
+  background: darken(deepskyblue, 2%);
+}
+
+.tracks-slider-wrapper {
+  display: flex;
+  position: absolute;
+
+
+}
+.tracks-slider-wrapper.tracks-slider-single {
+  flex: 1;
+  min-width: 26rem;
+
+}
+
+.tracks-slider-single {
+      /* background-image: url(../../public/woodDesktopImage.jpeg); */
+      background-color: #79ab7f;
+      /* background-color: #656565; */
+      border-radius: 20px;
+      color: white;
+      font-size: 150%;
+      padding: 0.89%;
+      /* max-width: 100%; */
+      height: 306px;
+      position: relative;
+      margin: 0 auto;
+      flex: 1;
+      min-width: 26rem;
+}
+.tracks-slider {
+  /* background-image: url('../../public/woodDesktopImage.jpeg'); */
+  /* background-color: honeydew; */
+  /* background-color: #656565; */
+  /* border-radius: 20px;
+  color: white;
+  font-size: 150%; */
+  /* padding: 10%; */
+
+  max-width: 26rem;
+  overflow-x: scroll;
+  height: 406px;
+  position: relative;
+  margin: 0 auto;
+
+  
+}
+/* .tracks-slider:after {
+  content: '';
+  display: block;
+  width: 100%;
+  
+  outline: 5px solid #61dafb;
+  position: absolute;
+  top:0;
+  left:0;
+    
+}  */
+.tracks-slider h2 {
+  padding: -7px;
+  color: #333333;
+  font-family: 'Calligraffitti', cursive;
+}
+.tracks-slider h3 {
+  padding: 5px;
+  color: #e5c454;
+  font-family: 'DM Serif Display';
+}
+
+.tracks-slider p {
+  padding: 5px;
+  color: #f08080;
+  text-align: right;
+  font-family: monospace;
+  text-decoration: double;
+  background: none;
+}
+
+.tracks-slider button {
+  color: #dc4242;
+  background: navajowhite;
+  border: none;
+  width: 25.2rem;
+  margin: -1rem;
+  border-radius: 3rem;
+}
+p {
+  margin-top: 0;
+  padding-left: 2%;
+  background: #00000063;
+  font-size: 2rem;
+  
+
+}
+
+
+.track-lyrics h2 {
+  text-align: center;
+    font-family: 'DM Serif Display', serif;
+    font-size: -webkit-xxx-large;
+    margin-bottom: -7px;
+}
+.track-lyrics h3 {
+  text-align: center;
+  font-family: monospace;
+  text-decoration: line-through;
+  text-decoration-color: #f0808080;
+  text-decoration-style: wavy;
+  text-transform: uppercase;
+  font-size: xx-large;
+  color: #03b9b9;
+    
+}
+.track-lyrics button {
+  margin-left: 40%;
+}
+
+.lyrics-original {
+  background: floralwhite;
+  text-decoration: underline;
+  text-decoration-color: lightblue;
+  display: table-cell;
+  border-radius: 6px;
+  color: darkslategrey;
+  font-size: 180%;
+  font-family: monospace;
+  max-width: 65%;
+  padding: 5%;
+
+}
+.track-lyrics p {
+  border-left-width: 42px;
+  border-left-style: double;
+  border-left-color: rgba(199, 40, 40, 0.22);
+}
+.lyrics-translated {
+  background: linear-gradient(90deg, #224c8b, #01324f);
+  text-decoration: none;
+  border-radius: 5px;
+  /* border-color: blue; */
+  color: #5399d3;
+  font-size: 2.5rem;
+  border-left: 24px;
+  border-left: 28px;
+  border-left-width: 42px;
+  border-left-style: groove;
+  border-left-color: steelblue;
+  font-family: 'Calligraffitti', cursive;
+  padding: 5%;
+  position: fixed;
+  right: 4px;
+  top: 240px;
+  max-width: 31%;
+
+}
+
+.lyrics-selected {
+  background: linear-gradient(90deg, #c55335, maroon);
+  text-decoration: none;
+  border-radius: 5px;
+  /* border-color: blue; */
+  color: lightsalmon;
+  font-size: 2.5rem;
+  border-left: 24px;
+  border-left: 28px;
+  border-left-width: 42px;
+  border-left-style: groove;
+  border-left-color: sienna;
+  /* border-left-color: aliceblue; */
+  font-family: 'Calligraffitti', cursive;
+  padding: 5%;
+  position: fixed;
+  left: 4px;
+  top: 240px;
+  max-width: 31%;
+
+}
+
+.revealTranslations {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.deck-card {
+  background-color: #79ab7f;
+  border-radius: 20px;
   color: white;
   font-size: 150%;
+  padding: 10%;
+  margin-bottom: 2%;
+  /* flex: 1; */
+}
+.deck-card h2 {
+      /* background: azure; */
+      text-align: center;
+      padding: 5px;
+      font-size: -webkit-xxx-large;
+      color: #333333;
+      font-family: 'Calligraffitti', cursive;
+}
+.deck-card p {
+    /* background: azure; */
+    text-align: center;
+    border-radius: 61%;
+    padding: 5px;
+    background: #0000004f;
+    font-size: x-large;
+    /* color: #333333; */
+    font-family: 'Calligraffitti', cursive;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Calligraffitti&display=swap');
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* margin: 0 0 60px; bottom has to be the same as footer height */
+  margin: 0;
+  overflow-x: hidden;
+}
+.bottomnavbar-container {
+  position: relative;
+
+}
+.bottomnavbar-search-block {
+  background-color: #dd45448c;
+  border-top: 1px solid #E7E7E7;
+  text-align: center;
+  padding: 20px;
+  /* color: turquoise; */
+  text-decoration-color: fixed;
+  position: fixed;
+  right: 67%;
+  bottom: 6rem;
+  height: 60px;
+  width: 32%;
+}
+.bottomnavbar-add-block {
+  background-color: #f28904a1;
+  border-top: 1px solid #E7E7E7;
+  text-align: center;
+  padding: 20px;
+  /* position: fixed; */
+  position: fixed;
+  right: 4px;
+  bottom: 6rem;
+  height: 60px;
+  width: 33%;
+}
+.bottomnavbar li {
+  text-decoration: none;
+  display: block;
+
 }

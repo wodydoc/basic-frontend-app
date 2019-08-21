@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import Tabs from '../components/Tabs.js';
+import BottomNavbar from '../components/BottomNavbar.js';
 import trackService from '../services/track-service';
 import TrackCard from '../components/TrackCard';
 import TrackLyrics from '../components/TrackLyrics';
@@ -8,6 +9,7 @@ import AddTrack from './AddTrack.js';
 import SearchPage from './SearchPage.js';
 import SearchList from '../components/SearchList';
 import {Link} from 'react-router-dom';
+import { removeProperties } from '@babel/types';
 
 class Home extends Component {
   //declare state here with empty array of tracks, and loading true
@@ -31,24 +33,43 @@ componentDidMount(){
       // call the method that gets my tracks and in the then setstate of tracks, and waitingForTracks false
 updateMyTracks = (id) => {
   //go to trackservice and edit the track
+  const myTracks = [...this.state.tracks];
+  const tracks = myTracks.filter(track => track._id.toString() !== id);
+  this.setState({tracks});
 }
   render() {
     const {tracks, waitingForTracks} = this.state;
     return (
+
       <div>
         <Tabs />
-        <Link to ="/AddTrack">Can't find a Track? Create one here!</Link><br></br>
-        <Link to ="/search">Have a Track in mind? Seach tracks here!</Link> 
-        <h1>MY TRACKS</h1>
-        
-        {
-          !waitingForTracks && tracks.map(track => <TrackCard track={track} updateMyTracks={this.updateMyTracks}/>)
+        {/* <Link to ="/AddTrack">Can't find a Track? Create one here!</Link><br></br>
+        <Link to ="/search">Have a Track in mind? Seach tracks here!</Link>  */}
+        <h1>my tracks</h1>
+        <div className="tracks-slider">
+          <div className="tracks-slider-wrapper">
+          {/* // style={{ */}
+          {/* //   'transform': `translateX(-${track.index*(100/tracks.length)}%)`
+          // }}> */}
+              {
+                !waitingForTracks && tracks.map((track, index) => <TrackCard key={index} track={track} updateMyTracks={this.updateMyTracks}/>)
 
-        }
+              }
+          </div>
+        </div>
 
         {/** here have conditional rendering that if loading is false, return a map using the this.state.tracks */}
-
+        {/* <div className="bottom"> */}
+        
+          
+            <BottomNavbar/>
+    
+       
+          
+        {/* </div> */}
       </div>
+
+
     )
   }
 }

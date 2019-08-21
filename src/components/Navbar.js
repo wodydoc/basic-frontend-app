@@ -5,11 +5,11 @@ import withAuth from './withAuth.js';
 class Navbar extends Component {
   render() {  
     return (
-      <div>
+      <div className="nav">
         {this.props.isLoggedIn ? (
           <>
-            <p>username: {this.props.user.username}</p>
             <p onClick={this.props.logout}>Logout</p>
+            <p>Welcome, {this.props.user.username}</p>
           </>
         ) : (
           <>

@@ -28,7 +28,10 @@ class App extends Component {
       <Router>
         <AuthProvider>
           <div className="container">
-            <h1>Cantar</h1>
+            <div className="logocontainer">
+            <h1>can</h1>
+            <h1>tar</h1>
+            </div>
             <Navbar />
             <Switch>
               <PrivateRoute exact path="/" component={Home} />
