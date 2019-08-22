@@ -49,7 +49,7 @@ class AddTrack extends Component {
                 <input onChange={(e)=>this.handleOnChange(e)} id="artist" name="artist" type="text" value={this.state.artist}></input>
                 <label htmlFor='lyrics'>Paste Lyrics here</label>
                 <input onChange={(e)=>this.handleOnChange(e)} id="lyrics" name="lyrics" type="text" value={this.state.lyrics}></input>
-                <label htmlFor='category'>Choose a category</label>
+                <label htmlFor='category'>Choose a CATEGORY</label>
                 <input onChange={(e)=>this.handleOnChange(e)} id="category" name="category" type="text"  value={this.state.category}></input>
                 <input type="submit"></input>
               </div>
