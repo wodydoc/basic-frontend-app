@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Switch} from 'react-router-dom';
 
+
 import Navbar from './components/Navbar.js';
 import PrivateRoute from './components/PrivateRoute.js';
 import AnonRoute from './components/AnonRoute.js';
@@ -22,6 +23,8 @@ import './App.css';
 import 'milligram';
 import LyricsPage from './pages/LyricsPage.js';
 
+// const Bounce = styled.div`animation: 2s ${keyframes `${bounce}`}infinite`;
+
 class App extends Component {
   render() {
     return (
@@ -29,7 +32,7 @@ class App extends Component {
         <AuthProvider>
           <div className="container">
             <div className="logocontainer">
-            <h1>can</h1>
+          <h1>can</h1>
             <h1>tar</h1>
             </div>
             <Navbar />

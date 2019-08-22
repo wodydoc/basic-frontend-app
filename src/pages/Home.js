@@ -36,7 +36,7 @@ updateMyTracks = (id) => {
     const {tracks, waitingForTracks} = this.state;
     return (
 
-      <div>
+      <div className="desktop">
         <Tabs />
         {/* <Link to ="/AddTrack">Can't find a Track? Create one here!</Link><br></br>
         <Link to ="/search">Have a Track in mind? Seach tracks here!</Link>  */}

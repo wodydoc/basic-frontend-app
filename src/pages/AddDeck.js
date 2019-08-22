@@ -39,8 +39,10 @@ class AddDeck extends Component {
         {/* <Tabs /> */}
         <h1>Create a Deck</h1>
         <form onSubmit={this.handleForm}>
-            <input onChange={(e)=>this.handleOnChange(e)} placeholder="Word" name="word" value={this.state.word}></input>
-            <input onChange={(e)=>this.handleOnChange(e)} placeholder="Translation" name="translation" value={this.state.translation}></input>
+        <label htmlFor='word'>New Vocab Word</label>
+            <input onChange={(e)=>this.handleOnChange(e)} id="word" name="word" type="text" value={this.state.word}></input>
+            <label htmlFor='translation'>Translation</label>
+            <input onChange={(e)=>this.handleOnChange(e)} id="translation" name="translation" type="text"  value={this.state.translation}></input>
             <input type="submit"></input>
         </form>
        

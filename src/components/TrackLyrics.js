@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios';
 import { async } from 'q';
+import AddDeck from '../pages/AddDeck';
 
 class TrackLyrics extends Component{
     //define state
@@ -72,7 +73,11 @@ class TrackLyrics extends Component{
                     {/* show the transaleted word when there is one */}
                     <div className="revealTranslations">
                         <h4 className="lyrics-selected">🇪🇸<i>dictionary</i><br></br>{this.state.lyricsTranslated}</h4>
-                        <h4 className="lyrics-translated">🇺🇸<i>my notebook</i><br></br>{this.state.lyricsSelected}</h4>
+                        {/* <h4 className="lyrics-translated">🇺🇸<i>my notebook</i><br></br><Link to ="/AddDeck"><strong>SEARCH</strong> </Link></h4> */}
+                    </div>
+                    <div className="createadeck">
+                    <AddDeck/>
+
                     </div>
                  {/* //love heart button on click props.updateMyTracks(props.track._id) */}
               </div>

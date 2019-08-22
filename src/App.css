@@ -8,6 +8,7 @@
   margin: 0;
   overflow-x: hidden;
   margin: 0 auto;
+  height: 85rem;
   max-width: 112.0rem;
   padding: 0 4.0rem;
   position: relative;
@@ -44,13 +45,25 @@
     transform: rotate(360deg);
   }
 }
+.desktop {
+  background: linear-gradient(90deg, #d85938, #dd8a4c);  /* background: url(/steel.jpg); */
+  background-position: left top;
+  background-position-x: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10rem;
+  background-position-y: top;
+  background-repeat: round;
 
+
+}
 .logocontainer h1 {
   margin-bottom: -2.0rem;
 }
 h1 {
   text-align: center;
-  font-family: 'DM Serif Display', serif;
+  font-family: monospace;
+  font-size: 4.6rem;
   
 
 }
@@ -67,8 +80,10 @@ p {
   justify-content: left;
 }
 .nav p{
-  width: 20%;
-  height: 40%;
+  height: 39%;
+  margin-top: 8%;
+  background: unset;
+  font-size: large;
 }
 .bottomnavbar a {
   color: white;
@@ -78,37 +93,41 @@ p {
 .tabs {
   list-style: none;
   margin: 0;
-  margin-left: -12%;
+  margin-left: -4%;
+  margin-right: -11%;
+  border-left-style: groove;
   border-radius: 15px;
-  border-left: 28px;
-  border-right-width: 104px;
+  /* border-left: 28px; */
+  border-left-width: 67px;
+  /* border-right-width: 104px; */
   border-right-style: groove;
-  border-right-color: lightpink;
+  border-left-color: #f998a6;
   background: #E5C454;
   display: flex;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   flex-wrap: nowrap;
 }
 
 .tabs li {
   width: 40%;
   height: 40%;
-  text-decoration: none;
+  text-decoration: overline;
   display: block;
-  width: 40%;
+  width: 69%;
   padding: 1em;
-  color: rgb(199, 40, 40);
-  text-align: center; 
+  /* color: rgb(47, 40, 199); */
+  text-align: center;
   padding: 10px;
-  border-top: 1px solid rgba(255,255,255,0.3); 
-  border-bottom: 6px solid rgba(0,0,0,0.1); 
-  font-family: monospace;
-  font-size: xx-large;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  border-bottom: 6px solid rgba(0,0,0,0.1);
+  font-family: inherit;
+  font-size: inherit;
 
 }
 .tabs li a {
   color: #282c34b8;
   font-weight: bold;
+    font-family: 'DM Serif Display';
 }
 
 .tabs Link {
@@ -133,44 +152,39 @@ p {
 
 
 }
-.tracks-slider-wrapper.tracks-slider-single {
-  flex: 1;
-  min-width: 26rem;
 
-}
 
 .tracks-slider-single {
-      /* background-image: url(../../public/woodDesktopImage.jpeg); */
-      background-color: #79ab7f;
-      /* background-color: #656565; */
-      border-radius: 20px;
-      color: white;
-      font-size: 150%;
-      padding: 0.89%;
-      /* max-width: 100%; */
-      height: 50rem;
-      position: relative;
-      margin: 0 auto;
-      flex: 1;
-      min-width: 30rem;
-      border-left: antiquewhite;
-      border-left-width: 3rem;
-      border-left-style: ridge;
-}
-.tracks-slider {
-  /* background-image: url('../../public/woodDesktopImage.jpeg'); */
-  /* background-color: honeydew; */
+  background: url(/compositiondiary2.jpg);
+  background-repeat: round;
+  background-size: cover;
   /* background-color: #656565; */
-  /* border-radius: 20px;
+  border-radius: 20px;
   color: white;
-  font-size: 150%; */
-  /* padding: 10%; */
-
-  max-width: 30rem;
-  overflow-x: scroll;
-  height: 50rem;
+  font-size: 150%;
+  padding: 0.89%;
+  padding-right: 0.89%;
+  /* max-width: 100%; */
+  height: 40rem;
   position: relative;
   margin: 0 auto;
+  flex: 1 1;
+  min-width: 10%;
+  /* border-left: #dd8a4c; */
+  /* border-left-width: 1.1rem; */
+  /* border-left-style: ridge; */
+}
+
+.tracks-slider {
+    /* background-image: url(../../public/woodDesktopImage.jpeg); */
+    /* background-color: honeydew; */
+    /* background-color: #656565; */
+    /* padding: 10%; */
+    max-width: 21.75rem;
+    overflow-x: scroll;
+    height: -webkit-fill-available;
+    position: relative;
+    margin: 0 auto;
 
   
 }
@@ -186,34 +200,58 @@ p {
     
 }  */
 .tracks-slider h2 {
+  text-align: center;
+  font-family: monospace;
+  text-decoration: underline;
+  text-decoration-color: #f0808080;
+  text-decoration-style: wavy;
+  text-transform: uppercase;
+  font-size: xx-large;
+  color: #e5c454;
   padding: -7px;
-  color: #333333;
-  font-family: 'Calligraffitti', cursive;
-  margin-bottom: 1rem;
+  margin-left: 0%;
+  margin-top: 25%;
+  color: firebrick;
+  text-decoration: underline;
+  text-align: center;
+  font-size: 110%;
+  font-family: 'Finger Paint';
+  /* margin-bottom: -1rem; */
+  background: white;
+  max-width: 20rem;
 }
 .tracks-slider h3 {
   padding: 5px;
-  color: #e5c454;
+  color: silver;
+  font-size: larger;
+  text-align: center;
   font-family: 'DM Serif Display';
+  background: white;
+  max-width: 15rem;
+  margin-left: 0%;
+  max-width: none;
+  line-height: 1.0;
+  margin-top: 11%;
 }
 
 .tracks-slider p {
-  padding: 5px;
-  color: wheat;
-  text-align: right;
-  font-family: monospace;
-  text-decoration: double;
-  background: none;
+    /* padding: 5px; */
+    color: wheat;
+    text-align: center;
+    font-family: monospace;
+    /* text-decoration: double; */
+    background: none;
 }
 
 .tracks-slider button {
-  color: #dc4242;
-  background: #ffdead82;
-  border: none;
-  width: 20.2rem;
-  font-family: monospace;
-  /* margin: -4rem; */
-  border-radius: 3rem;
+    color: #5f6c75;
+    background: #e1e1e1;
+    /* border: 15rem; */
+    border: 0.1rem solid black;
+    /* width: 20.2rem; */
+    font-family: monospace;
+    /* margin: -4rem; */
+    /* border-radius: 3rem; */
 }
 p {
   margin-top: 0;
@@ -262,11 +300,15 @@ p {
   font-family: monospace;
   max-width: 65%;
   padding: 5%;
+  margin-left:auto;
+  margin-right:auto;
 
 }
 .track-lyrics p {
+  /* text-align: center; */
   border-left-width: 42px;
   border-left-style: inset;
+  max-width: 41rem;
   border-left-color: rgba(199, 40, 40, 0.22);
 }
 .lyrics-translated i {
@@ -279,7 +321,7 @@ p {
   border-radius: 5px;
   /* border-color: blue; */
   color: wheat;
-  font-size: 2.5rem;
+  font-size: 2rem;
   border-left: 24px;
   border-left: 28px;
   border-left-width: 42px;
@@ -287,23 +329,36 @@ p {
   border-left-color: steelblue;
   font-family: 'Calligraffitti', cursive;
   padding: 5%;
+  padding-top: 5%;
+  padding-right: 5%;
+  padding-bottom: 18%;
+  padding-left: inherit;
   position: fixed;
   right: 4px;
-  top: 267px;
-  max-width: 31%;
+  bottom: 1%;
+  max-width: 60%;
 
 }
+
+
+.createadeck {
+  color: seashell;
+  position: sticky;
+  max-width: 50%;
+  margin-left: 2rem;
+}
+
+
+
 .lyrics-selected i {
   color: #ffb090;
   font-family: monospace;
 }
 .lyrics-selected {
-  background: linear-gradient(90deg, #ba4121, #800000e0);
-  text-decoration: none;
-  border-radius: 5px;
-  color: wheat;
+  background: linear-gradient(90deg, #dd8a4c, #ba4121);  border-radius: 18px;
+  color: seashell;
   /* border-color: blue; */
-  font-size: 2.5rem;
+  font-size: 3rem;
   border-left: 24px;
   border-left: 28px;
   border-left-width: 42px;
@@ -311,12 +366,15 @@ p {
   border-left-color: #da642c;
   /* border-left-color: aliceblue; */
   font-family: 'Calligraffitti', cursive;
-  
   padding: 5%;
+  padding-top: 5%;
+  padding-right: 5%;
+  padding-bottom: 18%;
+  padding-left: 2%;
   position: fixed;
-  left: 4px;
-  top: 267px;
-  max-width: 31%;
+  right: 4px;
+  bottom: -25px;
+  max-width: 71%;
 
 }
 
@@ -359,6 +417,7 @@ p {
 
 @import url('https://fonts.googleapis.com/css?family=Calligraffitti&display=swap');
 
+@import url('https://fonts.googleapis.com/css?family=Finger+Paint&display=swap');
 html {
   position: relative;
   min-height: 100%;
@@ -372,8 +431,10 @@ body {
   position: relative;
 
 }
+
+
 .bottomnavbar-search-block {
-  background-color: #5f6c75;
+  background-color: #322e2f;
   /* background-color: #dd45448c; */
   border-top: 1px solid #E7E7E7;
   text-align: center;
@@ -381,26 +442,31 @@ body {
   /* color: turquoise; */
   text-decoration-color: fixed;
   position: fixed;
-  right: 67%;
-  bottom: 6rem;
-  height: 60px;
-  width: 32%;
+  right: 60%;
+  bottom: 4%;
+    height: 60px;
+  width: 34%;
 }
 .bottomnavbar-add-block {
-  background-color: #5f6c75;
-  /* background-color: #f28904a1; */
+  background-color: #322e2f;
+    /* background-color: #f28904a1; */
   border-top: 1px solid #E7E7E7;
   text-align: center;
   padding: 20px;
   /* position: fixed; */
   position: fixed;
-  right: 4px;
-  bottom: 6rem;
-  height: 60px;
-  width: 33%;
+  left: 60%;
+  bottom: 4%;
+    height: 60px;
+  width: 34%;
 }
 .bottomnavbar li {
   text-decoration: none;
   display: block;
 
+}
+.bottomnavbar a {
+  color: white;
+  /* background: slategray; */
+  font-family: 'DM Serif Display';
 }

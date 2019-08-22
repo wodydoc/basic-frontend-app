@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import SearchList from '../components/SearchList';
 import trackService from '../services/track-service';
 import axios from 'axios';
+import BottomNavbar from '../components/BottomNavbar';
+import Tabs from '../components/Tabs';
 
 
 class SearchPage extends Component {
@@ -63,6 +65,7 @@ class SearchPage extends Component {
     const {showingSongs, lyrics} = this.state;
     return (
       <div>
+        <Tabs/>
         <h1>SEARCH TRACK</h1>
           <SearchList 
             updateShowingSongs={this.updateShowingSongs}
@@ -71,6 +74,7 @@ class SearchPage extends Component {
             return <><p>{song.title}</p><p>{song.artist}</p> <button onClick={(e)=>{this.addToFav(e,song._id)}}>Add to my tracks</button></>
           }) : null}
           {lyrics ? <p>{lyrics}</p> : null}
+          <BottomNavbar />
       </div>
     )
   }

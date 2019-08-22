@@ -18,6 +18,7 @@ function TrackCard(props) {
       }
     const {title, artist, category, _id} = props.track;
     return (
+
         <div className="tracks-slider-single">
             <Link to ={`/TrackLyrics/${_id}`}>
              <h2>{title}</h2>
