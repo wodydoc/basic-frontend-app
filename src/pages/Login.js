@@ -35,10 +35,10 @@ class Login extends Component {
           <input id='password' type='password' name='password' value={password} onChange={this.handleChange} />
           <input type='submit' value='Login' />
         </form>
-
+{/* 
         <p>You don't have an accout yet?
             <Link to={'/signup'}> Signup</Link>
-        </p>
+        </p> */}
       </>
     )
   }

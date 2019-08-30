@@ -9,7 +9,8 @@
     "react-cool-tabs": "^1.1.6",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.1.0"
+    "react-scripts": "3.1.0",
+    "react-sticky": "^6.0.3"
   },
   "scripts": {
     "start": "react-scripts start",

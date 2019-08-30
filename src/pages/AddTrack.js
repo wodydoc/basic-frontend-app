@@ -39,9 +39,10 @@ class AddTrack extends Component {
     return (
       <div>
         <Tabs />
-        <h1>ADD TRACK</h1>
+        {/* <h1>ADD TRACK</h1> */}
           <div class="create-track ui segment">
             <form class="ui form" onSubmit={this.handleForm}>
+            <p><strong>Create</strong> a cantar track &<br></br>add a <strong>*tag</strong> to<br></br>keep organized</p>
               <div class="field">
               <label htmlFor='title'>Track name</label>
                 <input onChange={(e)=>this.handleOnChange(e)} id="title" name="title" type="text" value={this.state.title}></input>
@@ -50,7 +51,8 @@ class AddTrack extends Component {
                 <label htmlFor='lyrics'>Paste Lyrics here</label>
                 <input onChange={(e)=>this.handleOnChange(e)} id="lyrics" name="lyrics" type="text" value={this.state.lyrics}></input>
                 <label htmlFor='category'>Choose a CATEGORY</label>
-                <input onChange={(e)=>this.handleOnChange(e)} id="category" name="category" type="text"  value={this.state.category}></input>
+                <input onChange={(e)=>this.handleOnChange(e)} id="category" name="category" type="radio"  value={this.state.category}></input>
+                <br></br>
                 <input type="submit"></input>
               </div>
             </form>

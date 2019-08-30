@@ -22,9 +22,9 @@ class Searchbar extends React.Component{
             <div class="search-bar ui segment">
                 <form onSubmit={this.handleSubmit} className='ui form'>
                     <div className='field'>
-                        <label htmlFor='track'>Track name</label>
+                        <label htmlFor='track'>title</label>
                         <input onChange={this.handleChange} name='track' type="text" value={this.state.track} id='track'/>
-                        <label htmlFor='artist'>Artist name</label>
+                        <label htmlFor='artist'>artist</label>
                         <input onChange={this.handleChange} name='artist' type="text" value={this.state.artist} id='artist'/>
                         <button>Search</button>
                     </div>

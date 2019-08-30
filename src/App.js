@@ -16,6 +16,7 @@ import Notes from './pages/Notes';
 import Decks from './pages/Decks';
 import Signup from './pages/Signup';
 import SearchPage from './pages/SearchPage';
+import Tabs from './components/Tabs';
 
 import AuthProvider from './contexts/auth-context.js';
 
@@ -32,20 +33,21 @@ class App extends Component {
         <AuthProvider>
           <div className="container">
             <div className="logocontainer">
-          <h1>can</h1>
-            <h1>tar</h1>
-            </div>
+
             <Navbar />
+            {/* <Tabs /> */}
+            </div>
             <Switch>
               <PrivateRoute exact path="/" component={Home} />
               <AnonRoute exact path="/signup" component={Signup} />
               <AnonRoute exact path="/login" component={Login} />
-              <PrivateRoute exact path="/addTrack" component={AddTrack} />
-              <PrivateRoute exact path="/trackLyrics/:id" component={LyricsPage} />
+              
               <PrivateRoute exact path="/search" component={SearchPage}/>
-              <PrivateRoute exact path="/decks/" component={Decks} />
+              <PrivateRoute exact path="/addTrack" component={AddTrack} />
               <PrivateRoute exact path="/addDeck" component={AddDeck} />
+              <PrivateRoute exact path="/trackLyrics/:id" component={LyricsPage} />
               <PrivateRoute exact path="/notes" component={Notes} />
+              <PrivateRoute exact path="/decks/" component={Decks} />
             </Switch>
           </div>
         </AuthProvider>

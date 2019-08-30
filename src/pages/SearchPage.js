@@ -63,17 +63,22 @@ class SearchPage extends Component {
   
   render() {
     const {showingSongs, lyrics} = this.state;
+
+    
     return (
       <div>
         <Tabs/>
-        <h1>SEARCH TRACK</h1>
+
+          {lyrics ? 
+          <p id="p1">{lyrics}</p> : <p>Search cantar tracks by<br></br><strong>title</strong><br></br>Search for lyrics by<br></br><strong>title & artist</strong>  </p>}
           <SearchList 
             updateShowingSongs={this.updateShowingSongs}
           />
           {showingSongs.length > 0 ? showingSongs.map(song => {
-            return <><p>{song.title}</p><p>{song.artist}</p> <button onClick={(e)=>{this.addToFav(e,song._id)}}>Add to my tracks</button></>
+            return <><p>{song.title} <i>by</i> {song.artist}</p>
+                      <button onClick={(e)=>{this.addToFav(e,song._id)}}>Guardar</button>
+                    </>
           }) : null}
-          {lyrics ? <p>{lyrics}</p> : null}
           <BottomNavbar />
       </div>
     )

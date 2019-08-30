@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import withAuth from './withAuth.js';
+import Tabs from './Tabs';
+
 
 class Navbar extends Component {
   render() {  
@@ -8,13 +10,16 @@ class Navbar extends Component {
       <div className="nav">
         {this.props.isLoggedIn ? (
           <>
-            <p><strong>Welcome, {this.props.user.username}</strong></p>
-            <p onClick={this.props.logout}>Logout</p>
+            <p><strong onClick={this.props.logout}>@</strong>{this.props.user.username}</p>
+            {/* <p>💡</p> */}
+            {/* <Tabs /> */}
           </>
         ) : (
           <>
+          <div className="loginsignup">
             <Link to='/login'>Login</Link>
             <Link to='/signup'>Signup</Link>
+          </div>
           </>
         )}
       </div>

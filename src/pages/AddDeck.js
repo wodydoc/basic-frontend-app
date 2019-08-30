@@ -26,7 +26,7 @@ class AddDeck extends Component {
       //track-service, adding to the DB
       //.then, once it is succesful, redirect to home 
       deckService.addDeck(this.state)
-        .then(data => this.props.history.push("/"))
+        .then(data => this.props.history.push("/decks"))
         .catch(error => console.log(error))
       
   }
@@ -36,12 +36,13 @@ class AddDeck extends Component {
 
     return (
       <div>
+         <Tabs />
         {/* <Tabs /> */}
-        <h1>Create a Deck</h1>
+        <h4>¡vocabulario!</h4>
         <form onSubmit={this.handleForm}>
-        <label htmlFor='word'>New Vocab Word</label>
+        <label htmlFor='word'>new vocabulary</label>
             <input onChange={(e)=>this.handleOnChange(e)} id="word" name="word" type="text" value={this.state.word}></input>
-            <label htmlFor='translation'>Translation</label>
+            <label htmlFor='translation'>notes / translation</label>
             <input onChange={(e)=>this.handleOnChange(e)} id="translation" name="translation" type="text"  value={this.state.translation}></input>
             <input type="submit"></input>
         </form>

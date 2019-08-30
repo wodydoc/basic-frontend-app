@@ -21,8 +21,18 @@ class DeckService {
     return this.decks.post('/decks/create', newDeck)
       .then(({ data }) => data);
   }
+  //saves to favorite 
+  saveDeck(id) {
+    return this.decks.put(`/decks/${id}/save`)
+      .then(({ data }) => data);
+  }
+  //unsaves to favorite 
+  unsaveDeck(id) {
+    return this.decks.delete(`/decks/${id}/unsave`)
+      .then(({ data }) => data);
+  }
 }
-
+//singleton
 
 const deckService = new DeckService();
 
