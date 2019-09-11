@@ -16,12 +16,12 @@ function TrackCard(props) {
     const {title, artist, category, _id} = props.track;
     return (
         <div className="myteachersmytracks">
-          <h4>¡mis maestr@s!</h4>
+          
           <div className="tracks-slider-single">
+              <button onClick={(e)=>{removeFromFav(e, _id)}}>remove</button>
               <Link to ={`/TrackLyrics/${_id}`}>
-              <button onClick={(e)=>{removeFromFav(e, _id)}}>vete a tomar por culo</button>
-              <h2>{artist}</h2>
               <h3>{title}</h3>
+              <h2>{artist}</h2>
               </Link> 
               <h4><strong>*</strong>{category}</h4>
             {/* //love heart button on click props.updateMyTracks(props.track._id) */}

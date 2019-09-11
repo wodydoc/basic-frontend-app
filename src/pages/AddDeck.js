@@ -36,7 +36,7 @@ class AddDeck extends Component {
 
     return (
       <div>
-         <Tabs />
+         {/* <Tabs /> */}
         {/* <Tabs /> */}
         <h4>¡vocabulario!</h4>
         <form onSubmit={this.handleForm}>
@@ -44,7 +44,7 @@ class AddDeck extends Component {
             <input onChange={(e)=>this.handleOnChange(e)} id="word" name="word" type="text" value={this.state.word}></input>
             <label htmlFor='translation'>notes / translation</label>
             <input onChange={(e)=>this.handleOnChange(e)} id="translation" name="translation" type="text"  value={this.state.translation}></input>
-            <input type="submit"></input>
+            <button type='submit'>Create</button>
         </form>
        
       </div>

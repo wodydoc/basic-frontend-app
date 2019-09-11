@@ -38,22 +38,22 @@ class AddTrack extends Component {
 
     return (
       <div>
-        <Tabs />
+        {/* <Tabs /> */}
         {/* <h1>ADD TRACK</h1> */}
           <div class="create-track ui segment">
             <form class="ui form" onSubmit={this.handleForm}>
             <p><strong>Create</strong> a cantar track &<br></br>add a <strong>*tag</strong> to<br></br>keep organized</p>
               <div class="field">
-              <label htmlFor='title'>Track name</label>
+              <label htmlFor='title'>put the track name here</label>
                 <input onChange={(e)=>this.handleOnChange(e)} id="title" name="title" type="text" value={this.state.title}></input>
-              <label htmlFor='artist'>Artist name</label>
+              <label htmlFor='artist'>and here goes the artist's name</label>
                 <input onChange={(e)=>this.handleOnChange(e)} id="artist" name="artist" type="text" value={this.state.artist}></input>
-                <label htmlFor='lyrics'>Paste Lyrics here</label>
+                <label htmlFor='lyrics'>Track Lyrics go here</label>
                 <input onChange={(e)=>this.handleOnChange(e)} id="lyrics" name="lyrics" type="text" value={this.state.lyrics}></input>
-                <label htmlFor='category'>Choose a CATEGORY</label>
-                <input onChange={(e)=>this.handleOnChange(e)} id="category" name="category" type="radio"  value={this.state.category}></input>
+                <label htmlFor='category'>is this track hard, medium, or easy?</label>
+                <input onChange={(e)=>this.handleOnChange(e)} id="category" name="category" type="text"  value={this.state.category}></input>
                 <br></br>
-                <input type="submit"></input>
+                <button>Create Track</button>
               </div>
             </form>
           </div>

@@ -42,20 +42,24 @@ class TrackLyrics extends Component{
         console.log()
           return (
             <div className="track-lyrics">
+              <div className="explainer">
+              <p>select the lyrics to translate them</p>
+
+              </div>
               <p className="lyrics-original">{lyrics}</p>
                   <div className="track-lyrics-header">
                    <h2>{title}</h2>
                       
-                   <h4>{category}</h4>
+                   {/* <h4>{category}</h4> */}
 
                     {/* show the transaleted word when there is one */}
                     <div className="revealTranslations">
                         <h4 className="lyrics-selected">
                         <h3>{artist}</h3>
-                          <br></br>
+                        
                              {this.state.lyricsTranslated}
                           <br></br>
-                              <button><Link to = "/AddDeck">💾</Link></button>
+                              <Link to = "/AddDeck">💾</Link>
                         </h4>
 
                         {/* <h4 className="lyrics-translated">🇺🇸<i>my notebook</i><br></br><Link to ="/AddDeck"><strong>SEARCH</strong> </Link></h4> */}

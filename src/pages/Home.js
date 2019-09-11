@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-
-import Tabs from '../components/Tabs';
 import trackService from '../services/track-service';
 import TrackCard from '../components/TrackCard';
 import BottomNavbar from '../components/BottomNavbar.js';
@@ -35,21 +33,21 @@ updateMyTracks = (id) => {
     const {tracks, waitingForTracks} = this.state;
     return (
       <div className="desktop">
-      <Tabs/>
+      {/* <Tabs/> */}
+      {/* <h4>¡maestr@s!</h4> */}
         {/* <Link to ="/AddTrack">Can't find a Track? Create one here!</Link><br></br>
         <Link to ="/search">Have a Track in mind? Seach tracks here!</Link>  */}
         {/* <h1>my tracks</h1> */}
         <div className="tracks-slider">
           <div className="tracks-slider-wrapper">
-        
-          {/* // style={{ */}
-          {/* //   'transform': `translateX(-${track.index*(100/tracks.length)}%)`
-          // }}> */}
               {
                 !waitingForTracks && tracks.map((track, index) => <TrackCard key={index} track={track} updateMyTracks={this.updateMyTracks}/>)
-
+                
               }
           </div>
+        </div>
+        <div className="homepageexplainer">
+              {/* <h5 className="red">where language & music meet</h5><h5 className="green">donde linguaje y musica se junten</h5> */}
         </div>
 
         {/** here have conditional rendering that if loading is false, return a map using the this.state.tracks */}

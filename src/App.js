@@ -5,10 +5,7 @@ import {BrowserRouter as Router, Switch} from 'react-router-dom';
 import Navbar from './components/Navbar.js';
 import PrivateRoute from './components/PrivateRoute.js';
 import AnonRoute from './components/AnonRoute.js';
-
-
 import Home from './pages/Home';
-import TrackLyrics from './components/TrackLyrics';
 import AddTrack from './pages/AddTrack';
 import AddDeck from './pages/AddDeck';
 import Login from './pages/Login';
@@ -33,9 +30,8 @@ class App extends Component {
         <AuthProvider>
           <div className="container">
             <div className="logocontainer">
-
-            <Navbar />
-            {/* <Tabs /> */}
+              <Navbar />
+              <Tabs />
             </div>
             <Switch>
               <PrivateRoute exact path="/" component={Home} />

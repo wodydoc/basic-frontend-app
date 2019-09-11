@@ -26,7 +26,7 @@ class Searchbar extends React.Component{
                         <input onChange={this.handleChange} name='track' type="text" value={this.state.track} id='track'/>
                         <label htmlFor='artist'>artist</label>
                         <input onChange={this.handleChange} name='artist' type="text" value={this.state.artist} id='artist'/>
-                        <button>Search</button>
+                        <button value="Submit">Search</button>
                     </div>
                 </form>
             </div>

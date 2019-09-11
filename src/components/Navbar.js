@@ -11,8 +11,7 @@ class Navbar extends Component {
         {this.props.isLoggedIn ? (
           <>
             <p><strong onClick={this.props.logout}>@</strong>{this.props.user.username}</p>
-            {/* <p>💡</p> */}
-            {/* <Tabs /> */}
+
           </>
         ) : (
           <>

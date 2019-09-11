@@ -2,12 +2,9 @@ import React, { Component } from 'react'
 
 import Tabs from '../components/Tabs.js';
 import trackService from '../services/track-service';
-import TrackCard from '../components/TrackCard';
+
 import TrackLyrics from '../components/TrackLyrics';
-import AddTrack from './AddTrack.js';
-import SearchPage from './SearchPage.js';
-import SearchList from '../components/SearchList';
-import {Link} from 'react-router-dom';
+
 
 class LyricsPage extends Component {
   //declare state here with empty array of tracks, and loading true
@@ -37,7 +34,7 @@ updateMyTracks = (id) => {
     const {track, waitingForTracks} = this.state;
     return (
       <div>
-        <Tabs />
+        {/* <Tabs /> */}
         {/* <Link to ="/AddTrack">Can't find a Track? Create one here!</Link><br></br>
         <Link to ="/search">Have a Track in mind? Seach tracks here!</Link>  */}
         {/* <h1>MY LYRICS</h1> */}

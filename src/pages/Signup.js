@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import withAuth from '../components/withAuth.js';
 
 class Signup extends Component {
@@ -35,9 +35,9 @@ class Signup extends Component {
     return (
       <>
         <form onSubmit={this.handleFormSubmit}>
-          <label htmlFor='username'>Username:</label>
+          <label htmlFor='username'>NAME</label>
           <input id='username' type='text' name='username' value={username} onChange={this.handleChange}/>
-          <label htmlFor='password'>Password:</label>
+          <label htmlFor='password'>PASSWORD</label>
           <input id='password' type='password' name='password' value={password} onChange={this.handleChange} />
           <input type='submit' value='Signup' />
         </form>
