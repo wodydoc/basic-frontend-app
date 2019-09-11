@@ -3,7 +3,9 @@ import axios from 'axios';
 import { async } from 'q';
 import {Link} from 'react-router-dom';
 
-// import AddDeck from '../pages/AddDeck';
+import {withRouter} from 'react-router-dom';
+import deckService from '../services/deck-service';
+import AddDeck from '../pages/AddDeck';
 
 class TrackLyrics extends Component{
   //define state
@@ -11,6 +13,8 @@ class TrackLyrics extends Component{
         lyrics:[],
         lyricsTranslated: "",
         lyricsSelected: "",
+        word: "",
+        translation: "",
         isSelecting: false,
         language: false
       }
@@ -35,7 +39,25 @@ class TrackLyrics extends Component{
             }
         }
       }
+      handleOnChange =(event) => {
+          const { lyricsSelected, lyricsTranslated, word, translation } = event.target
+          this.setState({
+              [lyricsSelected]: word,
+              [lyricsTranslated]: translation
+
+          })
+      }
       
+      // handleForm = (event) => {
+      //     //stops page from refreshing after submit
+      //     event.preventDefault()
+      //     //track-service, adding to the DB
+      //     //.then, once it is succesful, redirect to home 
+      //     deckService.addDeck(this.state.lyricsSelected)
+      //       // .then(data => this.props.history.push("/decks"))
+      //       .catch(error => console.log(error))
+          
+      // }
       render() {
         const {title, artist, lyrics, category} = this.props.track;
         console.log(this.state)
@@ -43,23 +65,35 @@ class TrackLyrics extends Component{
           return (
             <div className="track-lyrics">
               <div className="explainer">
-              <p>select the lyrics to translate them</p>
+              <p>select the text you would like to translate</p>
 
               </div>
               <p className="lyrics-original">{lyrics}</p>
                   <div className="track-lyrics-header">
                    <h2>{title}</h2>
-                      
-                   {/* <h4>{category}</h4> */}
 
-                    {/* show the transaleted word when there is one */}
                     <div className="revealTranslations">
                         <h4 className="lyrics-selected">
-                        <h3>{artist}</h3>
-                        
-                             {this.state.lyricsTranslated}
+                        <h3>{artist}:</h3>
+                        <i>"
+                        {this.state.lyricsSelected}
+
+                        "</i>
                           <br></br>
-                              <Link to = "/AddDeck">💾</Link>
+                        <strong>
+                        {this.state.lyricsTranslated}
+
+                        </strong>
+                        <AddDeck />
+                          {/* <Link to = "/AddDeck"><span role="img" aria-label>💾</span></Link> */}
+                          
+                          {/* <form onSubmit={this.handleForm}>
+                          <label htmlFor='word'>new vocabulary</label>
+                              <input onChange={(e)=>this.handleOnChange(e)} id="word" name="word" type="text" value={this.state.lyricsSelected}></input>
+                          <label htmlFor='translation'>notes / translation</label>
+                              <input onChange={(e)=>this.handleOnChange(e)} id="translation" name="word" type="text"  value={this.state.lyricsTranslated}></input>
+                              <button type='submit'>Create</button>
+                          </form> */}
                         </h4>
 
                         {/* <h4 className="lyrics-translated">🇺🇸<i>my notebook</i><br></br><Link to ="/AddDeck"><strong>SEARCH</strong> </Link></h4> */}
@@ -72,4 +106,4 @@ class TrackLyrics extends Component{
       }
 }
 
-export default TrackLyrics;
+export default withRouter(TrackLyrics);

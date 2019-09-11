@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 
-import Tabs from '../components/Tabs.js';
-
 import deckService from '../services/deck-service';
 
 import {withRouter} from 'react-router-dom';
@@ -11,7 +9,8 @@ class AddDeck extends Component {
   
   state = {
       word:"",
-      translation:""
+      translation:"",
+
   }
   
   handleOnChange =(event) => {
@@ -35,15 +34,13 @@ class AddDeck extends Component {
       console.log(this.props)
 
     return (
-      <div>
-         {/* <Tabs /> */}
-        {/* <Tabs /> */}
-        <h4>¡vocabulario!</h4>
+      <div className="newvocab">
+        {/* <h4>¡nuevo vocabulario!</h4> */}
         <form onSubmit={this.handleForm}>
-        <label htmlFor='word'>new vocabulary</label>
-            <input onChange={(e)=>this.handleOnChange(e)} id="word" name="word" type="text" value={this.state.word}></input>
-            <label htmlFor='translation'>notes / translation</label>
-            <input onChange={(e)=>this.handleOnChange(e)} id="translation" name="translation" type="text"  value={this.state.translation}></input>
+        <label htmlFor='word'>¡nuevo vocabulario!</label>
+            <input onChange={(e)=>this.handleOnChange(e)} id="word" name="word" type="text" value={this.state.lyricsSelected}></input>
+            <label htmlFor='translation'>traducción</label>
+            <input onChange={(e)=>this.handleOnChange(e)} id="translation" name="translation" type="text"  value={this.state.lyricsTranslated}></input>
             <button type='submit'>Create</button>
         </form>
        

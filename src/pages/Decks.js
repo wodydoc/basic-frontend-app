@@ -38,7 +38,7 @@ updateMyDecks = (id) => {
     return (
       <div className="language-book">
         {/* <Tabs/> */}
-        <h4>¡vocabulario!</h4>
+        <h4>¡mi vocabulario!</h4>
 
         {
           !waitingForDecks && decks.map(deck => <DeckCard deck={deck} updateMyDecks={this.updateMyDecks}/>)

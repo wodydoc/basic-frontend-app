@@ -66,19 +66,17 @@ class SearchPage extends Component {
     
     return (
       <div>
-        {/* <Tabs/> */}
-
           {lyrics ? 
-          <p id="p1">{lyrics}</p> : <p>Search cantar tracks by<br></br><strong>title</strong><br></br>Search for lyrics by<br></br><strong>title & artist</strong>  </p>}
+          <p id="p1">{lyrics}</p> : <p>Search tracks by <strong>title</strong><br></br> Search for lyrics by <strong>title & artist</strong>  </p>}
           <SearchList 
             updateShowingSongs={this.updateShowingSongs}
           />
           {showingSongs.length > 0 ? showingSongs.map(song => {
             return <><div className="codythisissearchresult">
                       <p>{song.title} <i>by</i> {song.artist}</p>
-                      <button onClick={(e)=>{this.addToFav(e,song._id)}}> +MyCantar</button>
+                      <button onClick={(e)=>{this.addToFav(e,song._id)}}>I want to learn this song</button>
               </div>
-                    </>
+                  </>
           }) : null}
           <BottomNavbar />
       </div>

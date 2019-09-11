@@ -5,19 +5,22 @@
   
 }
 body {
-  padding-bottom: 74%;
-  padding-left: 0%;
-  padding-right: 0%;
-  letter-spacing: .01em;
-  margin: 0px;
-  line-height: 1.6;
+  padding-bottom: 39%;
   overflow-x: auto;
-  background-color: #FFE082;
+  background-color: #3e2823;
+}
+.logocontainer {
+  padding-bottom: 20px;
+}
+img {
+  max-width: 100%;
+  margin-bottom: -7rem;
+  width: 28rem;
 }
 .container {
-  margin: 0;
+  margin: 0 auto;
   max-width: 112.0rem;
-  padding: 0.1rem;
+  padding: 0rem;
   position: relative;
   width: 100%;
 }
@@ -43,7 +46,7 @@ html {
   justify-content: space-between;
 }
 .codythisissearchresult {
-  display: flex;
+  
   background: -webkit-repeating-radial-gradient(#c24141,#ef7707,#feb512);
   padding-bottom: 10rem;
   justify-content: space-between;
@@ -64,15 +67,15 @@ FORMS */
 }
 
 form {
-  display: block;
+  /* display: block; */ 
   /* font-weight: 700; */
-  line-height: 3rem;
+  line-height: 2rem;
   /* font-size: 193%; */
   cursor: 'pointer';
   text-align: center;
   font-family: monospace;
   margin-bottom: 0rem;
-  color: #753c3a;
+  color: black;
 }
 input #track {
   color: red;
@@ -116,7 +119,7 @@ input #submit {
   color: #652c1c;
   font-family: monospace;
   cursor:'pointer';
-  position: fixed;
+  /* position: fixed; */
   left: 22%;
   top: 19rem;
 }
@@ -128,10 +131,10 @@ form .button {
 }
 .lyrics-selected a {
   position: fixed;
-  left: 1rem;
+  left: 1.5rem;
   cursor: 'pointer';
-  bottom: 0rem;
-  font-size: 3rem;
+  bottom: 21.3rem;
+  font-size: 2.8rem;
 }
 
 .nav p {
@@ -261,7 +264,7 @@ TOP LOGO */
   color: #fcebcf;
   text-align: center;
   font-family: 'DM Serif Display', serif;
-  font-size: -webkit-xxx-large;
+  font-size: large;
   margin-bottom: 0rem;
   line-height: 1.1rem;
   cursor:'pointer';
@@ -365,18 +368,27 @@ p {
 .track-lyrics p {
   text-align: justify;
   -moz-user-select: text;
-  background: #753c3a;
+  background: #3E2723;
   margin-top: 0rem;
-  padding-right: 0rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
   position: relative;
   user-select: text;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   line-height: normal;
   cursor: 'pointer';
   -webkit-user-select: text;
   max-width: 48rem;
   margin-left: auto;
   margin-right: auto;
+
+
+  -moz-user-select: text;
+
+  text-decoration: overline;
+  text-decoration-color: #c24141;
+
 }
 .myteachersmytracks p {
   color: #fcebcf;
@@ -415,6 +427,12 @@ p {
   color: #652c1c;
   line-height: 1.7rem;
   font-family: monospace;
+}
+
+.newvocab {
+  background: transparent;
+  color: white;
+
 }
 h4 {
   cursor: 'pointer';
@@ -458,23 +476,36 @@ h5.green {
 }
 
 .explainer p {
-  background: #fec23d;
-  color: #444c8c;
+  background: transparent;
+  color: #feb512;
+  padding: 0rem;
+  font-size: small;
   text-align: center;
-  font-family: 'Rakkas', cursive;
+  font-family: monospace;
+  text-align: center;
+  -moz-user-select: text;
+
+  user-select: text;
+  font-size: 2rem;
+  cursor: 'pointer';
+  -webkit-user-select: text;
+  max-width: 48rem;
+  -moz-user-select: text;
+  text-decoration: line-through;
+  text-decoration-color: #ef770778;
 }
 
 .track-lyrics h3 {
   text-align: -webkit-center;
   font-family: monospace;
   text-decoration: overline;
-  text-decoration-color: #ef7707;
+  text-decoration-color: white;
   cursor: 'pointer';
   /* text-decoration-style: inherit; */
   text-transform: uppercase;
-  font-size: 3rem;
-  letter-spacing: 0.3rem;
-  color: #c24141;
+  font-size: 2.3rem;
+  letter-spacing: 0.2rem;
+  color: black;
   text-transform: capitalize;
   margin-bottom: 0;
 }
@@ -496,27 +527,20 @@ h5.green {
 .track-lyrics h2 {
   text-align: center;
   font-family: 'DM Serif Display', serif;
-  font-size: 5rem;
+  font-size: 3.5rem;
   line-height: 0.5rem;
-  /* background: #b94021a1; */
   color: #927c72;
-  width: 100%;
-  padding-bottom: 0.1rem;
+  padding-left: 7rem;
+  padding-top: 1rem;
+  padding-right: 7rem;
   text-transform: capitalize;
-  padding-top: 3rem;
-  margin-top: 0;
-  color: #fcebcf;
   line-height: 3rem;
-  font-size: larger;
   text-transform: capitalize;
   margin-bottom: 0px;
   cursor: 'pointer';
-  text-align: -webkit-center;
   font-family: 'DM Serif Display';
-  font-size: 5rem;
-  color: #753c3a;
+  color: black;
   font-family: 'Rakkas', cursive;
-  padding-top: 2rem;
 }
 .tracks-slider h2 {
   text-align: center;
@@ -565,11 +589,15 @@ h1 {
 }
 
 .track-lyrics-header {
-  background: linear-gradient(1deg, #feb512, #ffe082fa);
+  background: linear-gradient(1deg, #ef7707, #c24141);
   position: fixed;
   bottom: 0rem;
   left: 0rem;
   width: -webkit-fill-available;
+  height: 23rem;
+  /* border-radius: 6rem; */
+  border-top-left-radius: 9rem;
+  border-top-right-radius: 9rem;
 }
 .track-lyrics {
   margin-bottom: 16rem;
@@ -578,30 +606,10 @@ h1 {
 
 
 
-.lyrics-original {
-  text-align: justify;
-  padding: 0px;
-  background: transparent;
-  -moz-user-select: text;
-  user-select: text;
-  -webkit-user-select: text;
-  text-decoration: overline;
-  text-decoration-color: #c24141;
-  display: flex;
-  border-radius: 6px;
-  color: #ffe082;
-  font-size: 97%;
-  font-family: 'DM Serif Display', serif;
-  margin-top: -3rem;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 
-.lyrics-translated i {
-  font-family: monospace;
-  color: #61b0f2;
-}
+
+
 .lyrics-translated {
   background: linear-gradient(90deg, #033351, #0a4c73d1);
   text-decoration: none;
@@ -653,48 +661,42 @@ h1 {
 
 
 .lyrics-selected i {
-  font-size: xx-large;
-  color: #b5af99;
-  font-family: 'DM Serif Display', serif;
-  margin-top: -2.3rem;
-  margin-right: 54%;
+  color: black;
+  font-family: monospace;
+  /* text-align: left; */
+}
+
+.lyrics-selected strong {
+  color: white;
+  font-family: monospace;
+  /* text-align: right; */
+  text-decoration: underline;
 }
 
 
 
-
 .lyrics-selected {
-    /* background: linear-gradient(90deg, #b5af99, #656565); */
-    /* background: linear-gradient(90deg, #dd8a4c, #ba4121); */
-    /* flex: 1 1; */
-    color: #fcebcf;
-    margin-top: 0px;
-    /* border-top-left-radius: 4px; */
-    /* font-family: monospace; */
-    /* padding: 5%; */
-    /* padding-top: 3%; */
-    font-family: monospace;
-    padding-right: 6%;
-    color: #444c8c;
-    text-align: center;
-    text-transform: uppercase;
-    padding-left: 2%;
-    /* padding-bottom: 2rem; */
-    /* position: fixed; */
-    /* right: 0px; */
-    padding-right: 2%;
-    line-height: normal;
-    width: 100%;
-    /* top: 27rem; */
-    max-width: 89rem;
-    margin-bottom: 4rem;
-    /* left: 0.1%; */
-    /* text-align: center; */
-    top: 19rem;
-    font-weight: bold;
-    font-size: 2.5rem;
-    max-height: 9rem;
-    overflow-y: scroll;
+  /* background: linear-gradient(90deg, #b5af99, #656565);  */
+  /* background: linear-gradient(90deg, #dd8a4c, #ba4121); */
+  /* flex: 1 1; */
+  color: #fcebcf;
+
+  font-family: monospace;
+  /* padding-right: 6%; */
+  padding-left: 4%;
+  padding-right: 4%;
+  color: #c24141;
+  
+  text-transform: uppercase;
+
+  line-height: normal;
+  width: 100%;
+  /* top: 27rem; */
+  max-width: 89rem;
+
+  font-size: 2.5rem;
+  max-height: 18rem;
+  overflow-y: scroll;
 }
 
 

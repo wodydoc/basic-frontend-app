@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import Component1 from './components/Component1';
+import Component2 from './components/Component2';
 import {BrowserRouter as Router, Switch} from 'react-router-dom';
 
 
@@ -20,6 +22,7 @@ import AuthProvider from './contexts/auth-context.js';
 import './App.css';
 import 'milligram';
 import LyricsPage from './pages/LyricsPage.js';
+import TrackLyrics from './components/TrackLyrics';
 
 // const Bounce = styled.div`animation: 2s ${keyframes `${bounce}`}infinite`;
 
@@ -32,6 +35,8 @@ class App extends Component {
             <div className="logocontainer">
               <Navbar />
               <Tabs />
+              <Component1 />
+              <Component2 />
             </div>
             <Switch>
               <PrivateRoute exact path="/" component={Home} />
@@ -41,6 +46,7 @@ class App extends Component {
               <PrivateRoute exact path="/search" component={SearchPage}/>
               <PrivateRoute exact path="/addTrack" component={AddTrack} />
               <PrivateRoute exact path="/addDeck" component={AddDeck} />
+              {/* <PrivateRoute exact path="/decks/create" component={TrackLyrics} /> */}
               <PrivateRoute exact path="/trackLyrics/:id" component={LyricsPage} />
               <PrivateRoute exact path="/notes" component={Notes} />
               <PrivateRoute exact path="/decks/" component={Decks} />
